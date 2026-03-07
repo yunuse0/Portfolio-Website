@@ -1,0 +1,41 @@
+/* src/app/globals.css */
+
+@import "tailwindcss";
+
+:root {
+  --background: #69ba6c;
+  --foreground: #ededed;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    /* Burayı tam siyah yaptık */
+    --foreground: #ededed;
+  }
+}
+
+body {
+  /* Temel Renk */
+  background-color: #030014;
+  /* Çok çok koyu mor-siyah */
+
+  /* Performanslı CSS Gradyanları */
+  background-image:
+    radial-gradient(circle at 0% 0%, rgba(76, 29, 149, 0.25) 0%, transparent 50%),
+    /* Sol Üst Mor */
+    radial-gradient(circle at 100% 0%, rgba(98, 77, 169, 0.266) 0%, transparent 50%),
+    /* Sağ Üst Mavi */
+    radial-gradient(circle at 50% 100%, rgba(124, 58, 237, 0.15) 0%, transparent 50%);
+  /* Alt Orta Lila */
+
+  background-attachment: fixed;
+  /* Sayfa kayarken arka plan sabit kalsın */
+  background-size: cover;
+  color: #fff;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
