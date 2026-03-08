@@ -29,7 +29,7 @@ const featuredProjects = [
     id: 1,
     title: "AI Powered Support Ticket System",
     desc: "AI-powered SaaS platform using Python, Ollama, and Vector Embeddings to automate customer support emails.",
-    image: "/images/z-support.png",
+    image: "/images/support.jpg",
     tags: ["Python", "Ollama", "Vector Embeddings"],
     link: "/projects/support-ticket"
   },
@@ -37,7 +37,7 @@ const featuredProjects = [
     id: 2,
     title: "Disaster Relief Communication System (TÜBİTAK 2209-A)",
     desc: "Offline-first mobile application that utilizes Bluetooth Mesh technology to establish a decentralized communication network.",
-    image: "/images/z-tübitak.png",
+    image: "/images/mobil.jpg",
     tags: ["React Native", "Bluetooth Mesh", "NLP"],
     link: "/projects/disaster-communication"
   },
@@ -45,7 +45,7 @@ const featuredProjects = [
     id: 3,
     title: "Multi-Agent Financial Analysis Platform",
     desc: "Orchestrating 5 autonomous AI agents for real-time parallel stock data analysis, trend prediction, and news retrieval via OpenAI.",
-    image: "/images/z-chimera.png",
+    image: "/images/chimera.jpg",
     tags: ["LangGraph", "Python", "Next.js"],
     link: "/projects/chimera-finans"
   }
@@ -60,7 +60,7 @@ export default function Home() {
         justifyContent: 'center',
         alignItems: 'center',
         p: { xs: 2, md: 4 },
-        pt: { xs: 2, md: 2 },
+        pt: { xs: 4, md: 4 },
       }}
     >
 
@@ -95,28 +95,28 @@ export default function Home() {
               Hello, My Name Is Yunus Emre
             </Typography>
 
-            <Typography
-              variant="h1"
-              fontWeight="800"
-              sx={{
-                fontSize: { xs: '2rem', md: '4rem' },
-                lineHeight: 1.1,
-                mb: 3,
-                p: 2,
-                background: 'linear-gradient(to right, #29292919, #826d969b)',
-                borderRadius: 12,
-                width: '70%',
-                mx: 'auto', // Kutunun kendisini yatay eksende merkeze alır
-                textAlign: 'center', // Kutunun içindeki yazıyı merkeze hizalar
-              }}
-            >
-              I DESIGN AND CODE<br />
-              <Typography sx={{ 
-                fontSize: { xs: '2rem', md: '4rem' },
-                lineHeight: 1.1,
-                }}>DIGITAL EXPERIENCES
-                </Typography> 
-            </Typography>
+<Typography
+  variant="h1"
+  fontWeight="800"
+  sx={{
+    fontSize: { xs: '1.75rem', sm: '2.5rem', md: '4rem' }, // Mobilde küçültüldü
+    lineHeight: 1.1,
+    mb: 3,
+    p: { xs: 1.5, md: 2 }, // Mobilde padding azaltıldı
+    background: 'linear-gradient(to right, #29292919, #826d969b)',
+    borderRadius: 12,
+    width: { xs: '100%', sm: '90%', md: '70%' }, // Mobilde tam genişlik alması sağlandı
+    mx: 'auto',
+    textAlign: 'center',
+    wordBreak: 'break-word', // Uzun kelimelerin taşmasını kesin olarak engeller
+  }}
+>
+  I DESIGN AND CODE<br />
+  {/* İçerideki span/typography'nin fontunu da dışarısı ile aynı yapıyoruz */}
+  <Box component="span" sx={{ fontSize: { xs: '1.75rem', sm: '2.5rem', md: '4rem' }, lineHeight: 1.1 }}>
+    DIGITAL EXPERIENCES
+  </Box> 
+</Typography>
 
             <Typography variant="body1" sx={{ color: 'rgba(255,255,255,0.6)', maxWidth: '700px', mx: 'auto', mb: 5, fontSize: '1.1rem', lineHeight: 1.6 }}>
             I use Node.js and Express.js for server-side development and build sustainable and scalable systems with TypeScript-based architectures in my projects. I have practical experience in database management and API development with PostgreSQL, MySQL, and Firebase.

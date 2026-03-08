@@ -20,7 +20,7 @@ export default function AboutPage() {
         justifyContent: 'center', 
         alignItems: 'center', 
         p: { xs: 2, md: 4 },
-        pt: { xs: 2, md: 2 },
+        pt: { xs: 4, md: 4 },
         pb: 10, // Alttan ekstra pay
       }}
     >

@@ -135,7 +135,7 @@ export default function ProjectCard({ project }: { project: any }) {
                             '&:hover': { bgcolor: '#e0e0e0' }
                         }}
                     >
-                        Projeyi İncele
+                        See Details
                     </Button>
 
                     <Button
@@ -150,7 +150,7 @@ export default function ProjectCard({ project }: { project: any }) {
                             '&:hover': { borderColor: '#a78bfa', color: '#a78bfa' }
                         }}
                     >
-                        {showAi ? 'Analizi Kapat' : 'AI Analizi'}
+                        {showAi ? 'Close Analyze' : 'AI Analyze'}
                     </Button>
                 </Stack>
 

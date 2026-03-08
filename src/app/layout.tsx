@@ -16,8 +16,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Benim Portfolyom",
-  description: "Modern Web Geliştirici Portfolyosu",
+  title: "My Portfolio",
+  description: "Modern Web Developer Portfolio",
 };
 
 export default function RootLayout({

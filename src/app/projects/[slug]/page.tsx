@@ -28,7 +28,7 @@ export default function ProjectDetailPage() {
     }
 
     return (
-        <Box sx={{ minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', p: { xs: 2, md: 4 }, pt: { xs: 12, md: 16 },  }}>
+        <Box sx={{ minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', p: { xs: 2, md: 4 }, pt: { xs: 12, md: 8 },  }}>
             <MotionBox
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -42,7 +42,7 @@ export default function ProjectDetailPage() {
                 }}
             >
                 <Box sx={{ height: { xs: '250px', md: '450px' }, position: 'relative' }}>
-                    <CardMedia component="img" image={project.coverImage} alt={project.title} sx={{ width: '100%', height: '100%', objectFit: 'fill' }} />
+                    <CardMedia component="img" image={project.coverImage} alt={project.title} sx={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                     <Box sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 0%, #050505 100%)' }} />
                 </Box>
 
@@ -79,7 +79,7 @@ export default function ProjectDetailPage() {
                     <Box sx={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.1rem', lineHeight: 1.8 }}>
                         <Typography paragraph sx={{ fontWeight: 'bold', color: '#fff' }}>{project.summary}</Typography>
                         <Typography paragraph>{project.fullContent}</Typography>
-                        <Typography variant="h6" sx={{ color: '#fff', mt: 4, mb: 2 }}>Kullanılan Teknolojiler</Typography>
+                        <Typography variant="h6" sx={{ color: '#fff', mt: 4, mb: 2 }}>Technologies</Typography>
                         <Stack direction="row" flexWrap="wrap" gap={1}>
                             {project.technologies.map((tech) => (
                                 <Chip key={tech} label={tech} variant="outlined" sx={{ color: 'rgba(255,255,255,0.7)', borderColor: 'rgba(255,255,255,0.2)' }} />
