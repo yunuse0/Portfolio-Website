@@ -1,110 +1,192 @@
 // src/data/projects.ts
+import { Project } from "@/types";
 
-export interface Project {
-    id: string; // <-- DÜZELTME: Burası artık number değil string
-    title: string;
-    slug: string;
-    description: string;
-    summary: string;
-    longDescription: string;
-    fullContent: string;
-    image: string;
-    coverImage: string;
-    tags: string[];
-    technologies: string[];
-    featured: boolean;
-    githubLink?: string;
-    demoLink?: string;
-}
+export type { Project };
 
 export const projects: Project[] = [
     {
-        id: "1", // <-- DÜZELTME: Tırnak içine aldık
-        title: "AI Powered Support Ticket System",
+        id: "1",
+        title: "Supsis AI - Modern Web & AI Communication Platform",
+        slug: "supsis-ai",
+        description: "Modern responsive web applications, Lighthouse optimization (Performance 90, SEO 100), and WhatsApp Business Cloud API & Meta integrations.",
+        summary: "Developed responsive interfaces across the Supsis AI ecosystem using Next.js & Framer Motion, raised performance to 90 and SEO to 100, and integrated WhatsApp Business Cloud API & Meta processes.",
+        longDescription: "At Supsis AI (supsis.com), developed responsive interfaces across the product ecosystem using Next.js, React, TypeScript, Tailwind CSS, and Framer Motion. Engineered Lighthouse-driven optimizations that raised measured performance from 49 to 90 and SEO from 80 to 100 (with other web quality metrics reaching 92-100). Integrated and validated WhatsApp Business Cloud API, Coexistence workflows, and Meta integration processes, while producing SEO-oriented web content and high-converting marketing pages.",
+        fullContent: "At Supsis AI (supsis.com), developed responsive interfaces across the product ecosystem using Next.js, React, TypeScript, Tailwind CSS, and Framer Motion. Engineered Lighthouse-driven optimizations that raised measured performance from 49 to 90 and SEO from 80 to 100 (with other web quality metrics reaching 92-100). Integrated and validated WhatsApp Business Cloud API, Coexistence workflows, and Meta integration processes, while producing SEO-oriented web content and high-converting marketing pages.",
+        tags: ["Next.js", "TypeScript", "Tailwind CSS", "SEO 100/100", "WhatsApp API", "Framer Motion"],
+        technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "WhatsApp Cloud API", "Google Analytics", "Search Console", "Meta API"],
+        featured: true,
+        demoLink: "https://supsis.com",
+        role: "Software Developer",
+        company: "Supsis AI",
+        period: "04/2026 – Present"
+    },
+    {
+        id: "2",
+        title: "Supsis Documentation - Technical Knowledge & Developer Platform",
+        slug: "supsis-documentation",
+        description: "MkDocs/Markdown-based technical documentation platform with automated production builds, developer guides, and API integration references.",
+        summary: "Maintained and structured the official technical documentation platform (doc.supsis.ai) for Supsis AI, managing production builds to HTML/JS.",
+        longDescription: "Architected and maintained the official MkDocs and Markdown-based developer documentation platform (doc.supsis.ai) for the Supsis AI ecosystem. Managed automated production builds to static HTML and JavaScript, implemented version control workflows with Bitbucket, structured PR reviews, and authored comprehensive developer guides for WhatsApp Business Cloud API, Coexistence, Meta integration, and customer communication automations.",
+        fullContent: "Architected and maintained the official MkDocs and Markdown-based developer documentation platform (doc.supsis.ai) for the Supsis AI ecosystem. Managed automated production builds to static HTML and JavaScript, implemented version control workflows with Bitbucket, structured PR reviews, and authored comprehensive developer guides for WhatsApp Business Cloud API, Coexistence, Meta integration, and customer communication automations.",
+        tags: ["MkDocs", "Markdown", "JavaScript", "HTML", "Bitbucket", "Documentation"],
+        technologies: ["MkDocs", "Markdown", "HTML5", "JavaScript", "Bitbucket", "Technical Writing", "API Docs"],
+        featured: true,
+        demoLink: "https://doc.supsis.ai",
+        role: "Software Developer",
+        company: "Supsis AI",
+        period: "04/2026 – Present"
+    },
+    {
+        id: "3",
+        title: "Staff Dog - Live Employee Monitoring & Productivity Platform",
+        slug: "staff-dog",
+        description: "Live employee monitoring system spanning a web platform, management/analytics dashboard, and optimized desktop application.",
+        summary: "Contributed to a live employee monitoring system with real-time tracking, screen capture, keyboard/mouse activity, and KVKK-compliant handling.",
+        longDescription: "Contributed to a live employee monitoring platform (staff-dog.com) spanning a web platform, analytics dashboard, and optimized desktop application. Worked on real-time monitoring, automatic time tracking, application and URL activity inspection, screen capture, keyboard/mouse activity metrics, and comprehensive reporting. Refined analytics data flows and supported secure, KVKK-oriented handling of sensitive employee monitoring data.",
+        fullContent: "Contributed to a live employee monitoring platform (staff-dog.com) spanning a web platform, analytics dashboard, and optimized desktop application. Worked on real-time monitoring, automatic time tracking, application and URL activity inspection, screen capture, keyboard/mouse activity metrics, and comprehensive reporting. Refined analytics data flows and supported secure, KVKK-oriented handling of sensitive employee monitoring data.",
+        tags: ["Node.js", "TypeScript", "Real-Time", "Analytics", "KVKK", "WebSockets"],
+        technologies: ["Node.js", "TypeScript", "WebSockets", "Dashboard UI", "Time Tracking", "Analytics"],
+        featured: true,
+        demoLink: "https://staff-dog.com",
+        role: "Software Developer",
+        company: "Staff Dog",
+        period: "Live Platform"
+    },
+    {
+        id: "4",
+        title: "Kanzigames - Multiplayer GameHub Platform",
+        slug: "kanzigames",
+        description: "Browser-based multiplayer platform with lobbies, real-time games, voice/text interaction, team chat, task management, and AI workflows.",
+        summary: "Co-founded and developed a multiplayer platform with lobbies, voice/text interaction, competition, internal team chat, and AI scope generation.",
+        longDescription: "Co-founded and developed a browser-based multiplayer platform (kanzigames.com) with real-time lobbies, interactive games, voice/text interaction, and competitive scoring using Node.js, JavaScript, and Socket.IO. Managed scope definition, testing, and responsive design across desktop and mobile. Built internal platform tools including team chat, task management, media storage, an AI-assisted scope-generation workflow, Telegram Bot integration, and PWA notifications.",
+        fullContent: "Co-founded and developed a browser-based multiplayer platform (kanzigames.com) with real-time lobbies, interactive games, voice/text interaction, and competitive scoring using Node.js, JavaScript, and Socket.IO. Managed scope definition, testing, and responsive design across desktop and mobile. Built internal platform tools including team chat, task management, media storage, an AI-assisted scope-generation workflow, Telegram Bot integration, and PWA notifications.",
+        tags: ["Node.js", "Socket.IO", "PWA", "Telegram Bot", "JavaScript", "Real-Time"],
+        technologies: ["Node.js", "Socket.IO", "JavaScript", "PWA", "Telegram Bot API", "WebSockets"],
+        featured: true,
+        demoLink: "https://kanzigames.com",
+        role: "Partner & Co-Founder | Product & Full-Stack Developer",
+        company: "Kanzigames",
+        period: "Present"
+    },
+    {
+        id: "5",
+        title: "Custom Business Automation & Enterprise Software Solutions",
+        slug: "enterprise-automation",
+        description: "Bespoke commercial web applications using Next.js, n8n automations, company-knowledge & appointment AI agents, and custom CRM.",
+        summary: "Architecting and deploying bespoke commercial web applications, n8n automations, and custom-built CRM architectures with AI agents.",
+        longDescription: "Architecting and deploying bespoke commercial web applications using Next.js, TypeScript, modern UI libraries, robust backend systems, and n8n automations. Developing company-knowledge and appointment AI agents alongside custom-built CRM architectures designed from scratch for enterprise clients, providing centralized operational monitoring and management. Translating business requirements into high-performance, production-ready software solutions across the entire development lifecycle.",
+        fullContent: "Architecting and deploying bespoke commercial web applications using Next.js, TypeScript, modern UI libraries, robust backend systems, and n8n automations. Developing company-knowledge and appointment AI agents alongside custom-built CRM architectures designed from scratch for enterprise clients, providing centralized operational monitoring and management. Translating business requirements into high-performance, production-ready software solutions across the entire development lifecycle.",
+        tags: ["Next.js", "TypeScript", "n8n", "AI Agents", "CRM", "Automation"],
+        technologies: ["Next.js", "TypeScript", "n8n", "AI Agents", "PostgreSQL", "REST APIs"],
+        featured: true,
+        role: "Partner & Co-Founder | Full-Stack Developer",
+        company: "Independent Startup Project",
+        period: "01/2026 – Present"
+    },
+    {
+        id: "6",
+        title: "AI Powered Support Ticket SaaS Platform",
         slug: "support-ticket",
-        description: "AI-powered SaaS platform using Python, Ollama, and Vector Embeddings to automate customer support emails.",
-        summary: "Engineered an AI-powered SaaS platform using Python, Ollama, and Vector Embeddings to automate customer support emails.",
-        longDescription: "Support Ticket AI is an intelligent, privacy-focused, on-premise customer support automation system. It autonomously analyzes incoming emails, classifies them using a hybrid approach, retrieves relevant past solutions (RAG), and generates professional responses using a local Small Language Model (SLM).Now features a modern, responsive Next.js frontend dashboard for managing tickets, visualizing AI reasoning, and reviewing      drafts before sending. Unlike wrapper-based AI tools, this project utilizes LangGraph for stateful orchestration with a fully-typed state machine, ensuring robust error handling and hallucination control.",
-        fullContent: "Support Ticket AI is an intelligent, privacy-focused, on-premise customer support automation system. It autonomously analyzes incoming emails, classifies them using a hybrid approach, retrieves relevant past solutions (RAG), and generates professional responses using a local Small Language Model (SLM).Now features a modern, responsive Next.js frontend dashboard for managing tickets, visualizing AI reasoning, and reviewing      drafts before sending. Unlike wrapper-based AI tools, this project utilizes LangGraph for stateful orchestration with a fully-typed state machine, ensuring robust error handling and hallucination control.",
+        description: "AI-powered SaaS platform using Python, Ollama, and Vector Embeddings to automate customer support emails with Next.js dashboard.",
+        summary: "Engineered an AI-powered customer support SaaS platform using Python, Ollama, and Vector Embeddings with Next.js, reducing response drafting time by ~80%.",
+        longDescription: "Developed an intelligent, privacy-focused customer support platform utilizing Python, Ollama, and vector embeddings (RAG) coupled with a Next.js frontend dashboard. Autonomously analyzes incoming customer inquiries, retrieves relevant past solutions via vector search, and drafts professional responses using local language models (SLM). Reduced response-drafting time by approximately 80% with stateful orchestration and robust hallucination control.",
+        fullContent: "Developed an intelligent, privacy-focused customer support platform utilizing Python, Ollama, and vector embeddings (RAG) coupled with a Next.js frontend dashboard. Autonomously analyzes incoming customer inquiries, retrieves relevant past solutions via vector search, and drafts professional responses using local language models (SLM). Reduced response-drafting time by approximately 80% with stateful orchestration and robust hallucination control.",
         image: "/images/support.jpg",
         coverImage: "/images/support.jpg",
-        tags: ["Python","Ollama", "Vector Embeddings", "Next.js", "TypeScript", "AI" ],
-        technologies: ["Python", "Ollama", "Vector Embeddings", "Next.js", "TypeScript",],
+        tags: ["Python", "Ollama", "Vector Embeddings", "Next.js", "TypeScript", "AI"],
+        technologies: ["Python", "Ollama", "Vector Embeddings", "LangGraph", "Next.js", "TypeScript", "FastAPI"],
         featured: true,
         githubLink: "https://github.com/berkea8/AI-Powered-Ticketing-System",
+        role: "Software Developer Intern (Web & AI)",
+        company: "Conforcus Bilişim Danışmanlık",
+        period: "09/2025 – 01/2026"
     },
     {
-        id: "2", // <-- DÜZELTME: Tırnak içine aldık
+        id: "7",
         title: "Multi-Agent Financial Analysis Platform",
         slug: "chimera-finans",
-        description: "Orchestrating 5 autonomous AI agents for real-time parallel stock data analysis, trend prediction, and news retrieval via OpenAI.",
-        summary: "Orchestrating 5 autonomous AI agents for real-time parallel stock data analysis, trend prediction, and news retrieval via OpenAI.",
-        longDescription:"Built a sophisticated investment tool using LangGraph and Python, orchestrating 5 autonomous AI agents for real-time parallel stock data analysis, trend prediction, and news retrieval via OpenAI. Developed a feature-rich Next.js and Material UI (MUI) dashboard featuring interactive stock charts, an AI investment chatbot with SQLite authentication to manage secure user sessions locally.",
-        fullContent:"Built a sophisticated investment tool using LangGraph and Python, orchestrating 5 autonomous AI agents for real-time parallel stock data analysis, trend prediction, and news retrieval via OpenAI. Developed a feature-rich Next.js and Material UI (MUI) dashboard featuring interactive stock charts, an AI investment chatbot with SQLite authentication to manage secure user sessions locally.",
+        description: "Orchestrating 5 autonomous AI agents for real-time parallel stock data analysis, trend prediction, and news retrieval via OpenAI & LangGraph.",
+        summary: "Built a financial analysis platform using LangGraph, Python, and OpenAI, orchestrating five autonomous AI agents with Next.js & Material UI.",
+        longDescription: "Built a sophisticated investment and financial analysis tool using LangGraph, Python, and OpenAI, orchestrating 5 autonomous AI agents for real-time parallel stock data analysis, trend prediction, and financial news synthesis. Developed a feature-rich Next.js and Material UI (MUI) dashboard with interactive charts and an AI investment assistant.",
+        fullContent: "Built a sophisticated investment and financial analysis tool using LangGraph, Python, and OpenAI, orchestrating 5 autonomous AI agents for real-time parallel stock data analysis, trend prediction, and financial news synthesis. Developed a feature-rich Next.js and Material UI (MUI) dashboard with interactive charts and an AI investment assistant.",
         image: "/images/chimera.jpg",
         coverImage: "/images/chimera.jpg",
-        tags: ["LangGraph", "Python", "Next.js", "TypeScript"],
-        technologies: ["LangGraph", "Python", "OpenAI", "Next.js", "TypeScript"],
+        tags: ["LangGraph", "Python", "OpenAI", "Next.js", "AI Agents", "TypeScript"],
+        technologies: ["LangGraph", "Python", "OpenAI", "Next.js", "Material UI", "TypeScript"],
         featured: true,
         githubLink: "https://github.com/yunuse0/Chimera-Finance",
+        role: "Software Developer Intern (Web & AI)",
+        company: "Conforcus Bilişim Danışmanlık",
+        period: "09/2025 – 01/2026"
     },
     {
-        id: "3", // <-- DÜZELTME: Tırnak içine aldık
-        title: "X-Ray Defect Detection using Transformer-Based Vision Models",
-        slug: "x-ray",
-        description: "End-to-end computer vision pipeline by scraping and preprocessing medical X-ray images for binary classification (fractured vs. healthy).",
-        summary: "End-to-end computer vision pipeline by scraping and preprocessing medical X-rayimages for binary classification (fractured vs. healthy).",
-        longDescription: "Designed an end-to-end computer vision pipeline by scraping and preprocessing medical X-ray images for binary classification (fractured vs. healthy). Trained and benchmarked multiple transformer-based and CNN architectures (ViT, BEiT, Swin, DeiT, ConvNeXt) in a GPU-accelerated environment. Evaluated model performance through quantitative metrics and visualized training results to support comparative analysis.",
-        fullContent: "Designed an end-to-end computer vision pipeline by scraping and preprocessing medical X-ray images for binary classification (fractured vs. healthy). Trained and benchmarked multiple transformer-based and CNN architectures (ViT, BEiT, Swin, DeiT, ConvNeXt) in a GPU-accelerated environment. Evaluated model performance through quantitative metrics and visualized training results to support comparative analysis.",
-        image: "/images/ai.jpg",
-        coverImage: "/images/ai.jpg",
-        tags: ["Python", "TensorFlow", "Matplotlib", "Transformers", "AI"],
-        technologies: ["Python", "TensorFlow", "Matplotlib", "Transformers", "Google Colab"],
-        featured: false,
-        githubLink: "https://github.com/yunuse0/Artificial-intelligence-project",
-    },
-    {
-        id: "5", // <-- DÜZELTME: Tırnak içine aldık
-        title: "Disaster Relief Communication System (TÜBİTAK 2209-A) ",
+        id: "8",
+        title: "Disaster Relief Communication System (TÜBİTAK 2209-A)",
         slug: "disaster-communication",
-        description: "Offline-first mobile application that utilizes Bluetooth Mesh technology to establish a decentralized communication network",
-        summary: "Offline-first mobile application that utilizes Bluetooth Mesh technology to establish a decentralized communication network",
-        longDescription: "Developing an offline-first mobile application that utilizes Bluetooth Mesh technology to establish a decentralized communication network, enabling data transmission without Internet or GSM. Implementing an AI-driven NLP module to analyze and prioritize help requests, generating realtime density maps to coordinate rescue teams effectively.",
-        fullContent: "Developing an offline-first mobile application that utilizes Bluetooth Mesh technology to establish a decentralized communication network, enabling data transmission without Internet or GSM. Implementing an AI-driven NLP module to analyze and prioritize help requests, generating realtime density maps to coordinate rescue teams effectively.",
+        description: "Offline-first mobile application using Bluetooth Mesh technology to establish a decentralized communication network with AI NLP prioritization.",
+        summary: "TÜBİTAK 2209-A funded offline-first decentralized communication network using Bluetooth Mesh and AI-driven NLP triage with real-time web heat maps.",
+        longDescription: "Developed an offline-first mobile application utilizing Bluetooth Mesh technology to establish a decentralized communication network, enabling life-saving data transmission in disaster scenarios without Internet or GSM connectivity. Implemented an AI-driven NLP module to analyze and prioritize emergency help requests, generated real-time density maps to coordinate rescue teams effectively, and created a web platform enabling support teams to visually monitor and manage rescue operations through interactive heat maps.",
+        fullContent: "Developed an offline-first mobile application utilizing Bluetooth Mesh technology to establish a decentralized communication network, enabling life-saving data transmission in disaster scenarios without Internet or GSM connectivity. Implemented an AI-driven NLP module to analyze and prioritize emergency help requests, generated real-time density maps to coordinate rescue teams effectively, and created a web platform enabling support teams to visually monitor and manage rescue operations through interactive heat maps.",
         image: "/images/mobil.jpg",
         coverImage: "/images/mobil.jpg",
-        tags: ["React Native", "Bluetooth Mesh", "NLP", "AI"],
-        technologies: ["React Native", "Bluetooth Mesh", "NLP"],
-        featured: false,
+        tags: ["React Native", "Bluetooth Mesh", "NLP", "AI", "TÜBİTAK 2209-A"],
+        technologies: ["React Native", "Bluetooth Mesh Protocol", "NLP", "Python", "Interactive Heat Maps", "TypeScript"],
+        featured: true,
         githubLink: "https://github.com/yunuse0/AfetIletisimApp",
+        role: "Lead Developer & Researcher",
+        company: "TÜBİTAK 2209-A Academic Project",
+        period: "Academic Project"
     },
     {
-        id: "4", // <-- DÜZELTME: Tırnak içine aldık
-        title: "Re-build the Legacy Web Site for T.Y.A.Y.S.D",
+        id: "9",
+        title: "Re-build Legacy Web Platform for T.Y.A.Y.S.D",
         slug: "legacy-website",
-        description: "Modernized the official digital presence of TYAYSD",
-        summary: "Modernized the official digital presence of TYAYSD",
-        longDescription: " Modernized the official digital presence of TYAYSD (Türkiye Yarış Atı Yetiştiricileri ve Sahipleri Derneği) by re-building their legacy website into a high-performance Next.js and TypeScript application, utilizing a modular and component-based architecture. Implemented Server-Side Rendering (SSR) to ensure indexability, achieving a perfect 100/100 SEO score and complying with web best practices. ",
-        fullContent: " Modernized the official digital presence of TYAYSD (Türkiye Yarış Atı Yetiştiricileri ve Sahipleri Derneği) by re-building their legacy website into a high-performance Next.js and TypeScript application, utilizing a modular and component-based architecture. Implemented Server-Side Rendering (SSR) to ensure indexability, achieving a perfect 100/100 SEO score and complying with web best practices. ",
+        description: "Rebuilt legacy website into a high-performance Next.js & TypeScript application with SSR and modular architecture, achieving 100/100 SEO.",
+        summary: "Modernized official digital presence for TYAYSD with Next.js, TypeScript, SSR, and modular architecture, achieving a perfect 100/100 SEO score.",
+        longDescription: "Modernized the official digital presence of TYAYSD (Türkiye Yarış Atı Yetiştiricileri ve Sahipleri Derneği) by re-building their legacy website into a high-performance Next.js and TypeScript application, utilizing a modular and component-based architecture. Implemented Server-Side Rendering (SSR) to ensure maximum indexability, achieving a perfect 100/100 SEO score and complying with modern web best practices.",
+        fullContent: "Modernized the official digital presence of TYAYSD (Türkiye Yarış Atı Yetiştiricileri ve Sahipleri Derneği) by re-building their legacy website into a high-performance Next.js and TypeScript application, utilizing a modular and component-based architecture. Implemented Server-Side Rendering (SSR) to ensure maximum indexability, achieving a perfect 100/100 SEO score and complying with modern web best practices.",
         image: "/images/web.jpg",
         coverImage: "/images/web.jpg",
-        tags: ["Next.js", "Material UI", "TypeScript",],
-        technologies: ["Next.js", "Material UI", "TypeScript",],
+        tags: ["Next.js", "TypeScript", "SSR", "SEO 100/100", "Material UI"],
+        technologies: ["Next.js", "TypeScript", "Material UI", "SSR", "Technical SEO"],
         featured: false,
+        role: "Software Developer Intern (Web & AI)",
+        company: "Conforcus Bilişim Danışmanlık",
+        period: "09/2025 – 01/2026"
     },
     {
-        id: "6", // <-- DÜZELTME: Tırnak içine aldık
-        title: "Comprehensive Admin Dashboard",
+        id: "10",
+        title: "Comprehensive Admin Dashboard & CMS with RBAC",
         slug: "admin-dashboard",
-        description: "Developed an Admin Dashboard for the new web site of T.Y.A.Y.S.D",
-        summary: "Developed an Admin Dashboard for the new web site of T.Y.A.Y.S.D",
-        longDescription: " Developed a comprehensive Admin Dashboard (CMS) using Next.js, Material UI and TypeScript, enabling dynamic management of all website content. Implemented Role-Based Access Control (RBAC) and engineered secure data operations using PostgreSQL and Prisma ORM.",
-        fullContent: " Developed a comprehensive Admin Dashboard (CMS) using Next.js, Material UI and TypeScript, enabling dynamic management of all website content. Implemented Role-Based Access Control (RBAC) and engineered secure data operations using PostgreSQL and Prisma ORM.",
+        description: "Next.js + Material UI dashboard with Role-Based Access Control (RBAC), PostgreSQL, Prisma ORM, and AI chatbot functionality.",
+        summary: "Developed a TypeScript CMS dashboard with Role-Based Access Control (RBAC), PostgreSQL, Prisma ORM, and AI chatbot integration.",
+        longDescription: "Developed a comprehensive Admin Dashboard (CMS) using Next.js, Material UI, and TypeScript, enabling dynamic management of website content. Implemented Role-Based Access Control (RBAC), AI chatbot functionality, and engineered secure data operations using PostgreSQL and Prisma ORM.",
+        fullContent: "Developed a comprehensive Admin Dashboard (CMS) using Next.js, Material UI, and TypeScript, enabling dynamic management of website content. Implemented Role-Based Access Control (RBAC), AI chatbot functionality, and engineered secure data operations using PostgreSQL and Prisma ORM.",
         image: "/images/admin.jpg",
         coverImage: "/images/admin.jpg",
-        tags: ["Next.js", "Node.js", "Material UI", "TypeScript", "PostgreSql", "Prisma ORM"],
-        technologies: ["Next.js", "Node.js", "Material UI", "TypeScript", "PostgreSql", "Prisma ORM"],
+        tags: ["Next.js", "TypeScript", "PostgreSQL", "Prisma ORM", "RBAC", "Node.js"],
+        technologies: ["Next.js", "Node.js", "Material UI", "TypeScript", "PostgreSQL", "Prisma ORM", "RBAC"],
         featured: false,
         githubLink: "https://github.com/taylnAydin/admin_panel_backend",
+        role: "Software Developer Intern (Web & AI)",
+        company: "Conforcus Bilişim Danışmanlık",
+        period: "09/2025 – 01/2026"
     },
+    {
+        id: "11",
+        title: "X-Ray Defect Detection with Transformer-Based Vision Models",
+        slug: "x-ray",
+        description: "Computer vision pipeline benchmarking transformer (ViT, BEiT, Swin, DeiT) and CNN architectures on GPU.",
+        summary: "End-to-end computer vision pipeline scraping and preprocessing medical X-rays for classification using Vision Transformers and CNNs.",
+        longDescription: "Designed an end-to-end computer vision pipeline by scraping and preprocessing medical X-ray images for binary classification. Trained and benchmarked multiple transformer-based and CNN architectures (ViT, BEiT, Swin, DeiT, ConvNeXt) in a GPU-accelerated environment. Evaluated model performance through quantitative metrics and visualized training results.",
+        fullContent: "Designed an end-to-end computer vision pipeline by scraping and preprocessing medical X-ray images for binary classification. Trained and benchmarked multiple transformer-based and CNN architectures (ViT, BEiT, Swin, DeiT, ConvNeXt) in a GPU-accelerated environment. Evaluated model performance through quantitative metrics and visualized training results.",
+        image: "/images/ai.jpg",
+        coverImage: "/images/ai.jpg",
+        tags: ["Python", "TensorFlow", "Transformers", "Computer Vision", "AI"],
+        technologies: ["Python", "TensorFlow", "Keras", "Transformers (ViT, Swin)", "Google Colab"],
+        featured: false,
+        githubLink: "https://github.com/yunuse0/Artificial-intelligence-project",
+        role: "Machine Learning Researcher",
+        period: "Academic Project"
+    }
 ];

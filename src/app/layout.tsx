@@ -1,14 +1,12 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google"; // Inter'i sildim, gerek yoksa
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import CardNav from "@/components/ui/CardNav";
 import Footer from "@/components/ui/Footer";
-import ThemeRegistry from "@/components/ThemeRegistry"; // <-- YENİ EKLEDİĞİMİZ DOSYA
+import ThemeRegistry from "@/components/ThemeRegistry";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 
-
-// Bu font ayarı Tailwind ve düz HTML elementleri için kalabilir
 const montserrat = Montserrat({ 
   subsets: ['latin'],
   display: 'swap',
@@ -16,8 +14,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "Modern Web Developer Portfolio",
+  title: "Yunus Emre Kılıç | Full-Stack Software Engineer & AI Applications",
+  description: "Portfolio of Yunus Emre Kılıç - Full-Stack Software Engineer specializing in TypeScript, Next.js, AI Agents, Automations, and Real-Time Systems.",
 };
 
 export default function RootLayout({
@@ -26,10 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr" className="dark">
+    <html lang="en" className="dark">
       <body className={montserrat.className}>
         
-        {/* MUI TEMA SARMALAYICISI BAŞLIYOR */}
+        {/* MUI TEMA SARMALAYICISI */}
         <ThemeRegistry> 
           
           <CardNav
@@ -43,12 +41,12 @@ export default function RootLayout({
                 ]
               },
               {
-                label: 'About - Contact',
+                label: 'About & Contact',
                 bgColor: '#581c87',
                 textColor: '#ffffff',
                 links: [
-                  { label: 'About Me - CV', href: '/about', ariaLabel: 'Genel Bilgilerim ve CV' },
-                  { label: 'Contact', href: '/contact', ariaLabel: 'İletişim Bilgilerim' }
+                  { label: 'About Me & Experience', href: '/about', ariaLabel: 'Genel Bilgilerim ve CV' },
+                  { label: 'Contact', href: '/contact', ariaLabel: 'İletişim Bilgileri' }
                 ]
               }
             ]}
@@ -62,7 +60,6 @@ export default function RootLayout({
           <Footer />
 
         </ThemeRegistry>
-        {/* MUI TEMA SARMALAYICISI BİTTİ */}
 
       </body>
     </html>

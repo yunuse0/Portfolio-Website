@@ -2,13 +2,18 @@
 import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
 
-const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY, 
-});
+export const dynamic = 'force-dynamic';
 
 export async function POST(req: Request) {
     try {
-        // Formdan gelen bilgileri alıyoruz (lang varsayılan olarak 'tr' ayarlı)
+        const apiKey = process.env.OPENAI_API_KEY;
+        if (!apiKey) {
+            return NextResponse.json({ 
+                reply: 'AI analizi için OPENAI_API_KEY yapılandırması gereklidir. (Proje detayları yukarıda mevcuttur)' 
+            });
+        }
+
+        const openai = new OpenAI({ apiKey });
         const { type, content, context, lang = 'tr' } = await req.json();
 
         let messages: any[] = [];
@@ -79,7 +84,7 @@ export async function POST(req: Request) {
 
             messages = [
                 { role: "system", content: systemPrompt },
-                { role: "user", content: `Proje Başlığı: ${content.title}\nTeknolojiler: ${content.tags.join(', ')}\nAçıklama: ${content.description}` }
+                { role: "user", content: `Proje Başlığı: ${content.title}\nTeknolojiler: ${Array.isArray(content.tags) ? content.tags.join(', ') : content.tags}\nAçıklama: ${content.description}` }
             ];
         }
 
