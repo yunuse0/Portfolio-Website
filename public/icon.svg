@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e0918" />
+      <stop offset="100%" stop-color="#040306" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f3e8ff" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background container -->
+  <rect width="512" height="512" rx="120" fill="url(#bg)" />
+  <rect width="500" height="500" x="6" y="6" rx="114" fill="none" stroke="url(#purpleGrad)" stroke-width="12" stroke-opacity="0.6" />
+  
+  <!-- Subtle center ambient radial light -->
+  <circle cx="256" cy="256" r="160" fill="#8b5cf6" opacity="0.12" />
+
+  <!-- Modern Geometric Monogram 'Y' -->
+  <path d="M140 140 L256 288 L256 396" fill="none" stroke="url(#purpleGrad)" stroke-width="46" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M372 140 L256 288" fill="none" stroke="url(#accentGlow)" stroke-width="46" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Center tech core dot -->
+  <circle cx="256" cy="288" r="14" fill="#ffffff" />
+</svg>

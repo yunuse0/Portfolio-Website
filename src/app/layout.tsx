@@ -16,6 +16,13 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Yunus Emre Kılıç | Full-Stack Software Engineer & AI Applications",
   description: "Portfolio of Yunus Emre Kılıç - Full-Stack Software Engineer specializing in TypeScript, Next.js, AI Agents, Automations, and Real-Time Systems.",
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
 };
 
 export default function RootLayout({

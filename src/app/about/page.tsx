@@ -56,7 +56,7 @@ const experiences = [
   },
   {
     title: "Software Developer",
-    company: "Staff Dog",
+    company: "Staff Dog - Supsis Ai",
     period: "Live Platform",
     domain: "Live employee monitoring & productivity platform",
     links: [
@@ -166,12 +166,12 @@ const academicProjects = [
 
 export default function AboutPage() {
   return (
-    <Box 
-      sx={{ 
-        minHeight: '100vh', 
-        display: 'flex', 
-        justifyContent: 'center', 
-        alignItems: 'center', 
+    <Box
+      sx={{
+        minHeight: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         p: { xs: 2, md: 4 },
         pt: { xs: 4, md: 4 },
         pb: 10,
@@ -195,8 +195,8 @@ export default function AboutPage() {
       >
         {/* Geri Dön Butonu */}
         <Box sx={{ position: 'relative', zIndex: 5, mb: 4 }}>
-          <Button 
-            component={Link} 
+          <Button
+            component={Link}
             href="/"
             startIcon={<ArrowBackIcon />}
             sx={{ color: 'rgba(255,255,255,0.6)', textTransform: 'none', '&:hover': { color: '#fff' } }}
@@ -207,7 +207,7 @@ export default function AboutPage() {
 
         {/* --- ÜST BÖLÜM: BİO + FOTOĞRAF --- */}
         <Box
-          sx={{ 
+          sx={{
             display: 'flex',
             flexDirection: { xs: 'column-reverse', md: 'row' },
             alignItems: 'center',
@@ -222,7 +222,7 @@ export default function AboutPage() {
             <Typography variant="h3" fontWeight="bold" sx={{ color: '#fff', mb: 1, fontSize: { xs: '2.2rem', md: '3.3rem' } }}>
               Yunus Emre Kılıç
             </Typography>
-            
+
             <Typography variant="h6" sx={{ color: '#a78bfa', mb: 3, fontWeight: 500, lineHeight: 1.4, fontSize: { xs: '1.05rem', md: '1.25rem' } }}>
               Full-Stack Software Engineer | AI Applications & Automation | Web Technologies
             </Typography>
@@ -254,27 +254,27 @@ export default function AboutPage() {
 
             {/* Sosyal Medya & CV Butonları */}
             <Stack direction="row" spacing={1.5} sx={{ mt: 3 }} flexWrap="wrap" useFlexGap>
-              <IconButton 
-                component="a" 
-                href="https://github.com/yunuse0" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                sx={{ 
-                  color: '#fff', 
-                  border: '1px solid rgba(255,255,255,0.1)', 
-                  '&:hover': { bgcolor: 'rgba(255,255,255,0.1)' } 
-                }} 
+              <IconButton
+                component="a"
+                href="https://github.com/yunuse0"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{
+                  color: '#fff',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  '&:hover': { bgcolor: 'rgba(255,255,255,0.1)' }
+                }}
               >
                 <GitHubIcon />
               </IconButton>
               <IconButton
-                href="https://www.linkedin.com/in/yunus-emre-k%C4%B1l%C4%B1%C3%A7-a6570a291/" 
-                target="_blank" 
-                rel="noopener noreferrer"  
-                sx={{ 
-                  color: '#0077b5', 
-                  border: '1px solid rgba(255,255,255,0.1)', 
-                  '&:hover': { bgcolor: 'rgba(255,255,255,0.1)' } 
+                href="https://www.linkedin.com/in/yunus-emre-k%C4%B1l%C4%B1%C3%A7-a6570a291/"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{
+                  color: '#0077b5',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  '&:hover': { bgcolor: 'rgba(255,255,255,0.1)' }
                 }}
               >
                 <LinkedInIcon />
@@ -303,8 +303,8 @@ export default function AboutPage() {
 
           {/* SAĞ: FOTOĞRAF */}
           <Box sx={{ flex: 0.7, position: 'relative', display: 'flex', justifyContent: 'center' }}>
-            <Box 
-              sx={{ 
+            <Box
+              sx={{
                 position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
                 width: '130%', height: '130%',
                 background: 'radial-gradient(circle, rgba(167, 139, 250, 0.15) 0%, rgba(0,0,0,0) 60%)',
@@ -511,9 +511,9 @@ export default function AboutPage() {
             <Typography variant="h4" fontWeight="bold" sx={{ color: '#fff' }}>
               Live Resume
             </Typography>
-            <Button 
-              component="a" 
-              href="/cv.pdf" 
+            <Button
+              component="a"
+              href="/cv.pdf"
               download="Yunus_Emre_Kilic_CV.pdf"
               variant="contained"
               startIcon={<DownloadIcon />}
@@ -524,30 +524,30 @@ export default function AboutPage() {
           </Stack>
 
           {/* Masaüstü: Iframe | Mobil: İndirme Kartı */}
-          <Box 
-            sx={{ 
-              width: '100%', 
-              maxWidth: '900px', 
+          <Box
+            sx={{
+              width: '100%',
+              maxWidth: '900px',
               mx: 'auto',
-              borderRadius: 4, 
-              overflow: 'hidden', 
+              borderRadius: 4,
+              overflow: 'hidden',
               border: '1px solid rgba(248, 248, 248, 0.15)',
-              bgcolor: 'rgba(255,255,255,0.02)', 
+              bgcolor: 'rgba(255,255,255,0.02)',
               position: 'relative',
               padding: 2
             }}
           >
             {/* Masaüstü Önizleme */}
             <Box sx={{ display: { xs: 'none', md: 'block' }, height: '900px' }}>
-              <iframe 
-                src="/cv.pdf" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 'none' }} 
-                title="CV Preview" 
+              <iframe
+                src="/cv.pdf"
+                width="100%"
+                height="100%"
+                style={{ border: 'none' }}
+                title="CV Preview"
               />
             </Box>
-            
+
             {/* Mobil Bilgilendirme */}
             <Box sx={{ display: { xs: 'flex', md: 'none' }, flexDirection: 'column', alignItems: 'center', py: 8, px: 4, textAlign: 'center', gap: 2 }}>
               <PictureAsPdfIcon sx={{ fontSize: 60, color: '#a78bfa' }} />
