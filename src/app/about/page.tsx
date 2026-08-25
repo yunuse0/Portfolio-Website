@@ -539,12 +539,12 @@ export default function AboutPage() {
           >
             {/* Masaüstü Önizleme */}
             <Box sx={{ display: { xs: 'none', md: 'block' }, height: '900px' }}>
-              <iframe
-                src="/cv.pdf"
-                width="100%"
-                height="100%"
-                style={{ border: 'none' }}
-                title="CV Preview"
+              <iframe 
+                src="/cv.pdf?v=2" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 'none' }} 
+                title="CV Preview" 
               />
             </Box>
 
